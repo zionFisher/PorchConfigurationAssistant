@@ -70,3 +70,4 @@ g++ "${file}",
 ## 项目地址
 
 [Github link](https://github.com/zionFisher/PorchConfigurationAssistant)
+[压缩包下载](https://github.com/zionFisher/PorchConfigurationAssistant/releases/tag/PCA-Release)
