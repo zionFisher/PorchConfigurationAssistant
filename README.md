@@ -43,6 +43,30 @@
 3. Gdi32.Lib
 4. glfw3.dll
 
+GCC 编译指令（vscode build）（tacks.json--"tasks" : "args"）：
+```
+g++ "${file}",
+    "${workspaceFolder}\\source\\imgui\\imgui_demo.cpp",
+    "${workspaceFolder}\\source\\imgui\\imgui_draw.cpp",
+    "${workspaceFolder}\\source\\imgui\\imgui_impl_glfw.cpp",
+    "${workspaceFolder}\\source\\imgui\\imgui_impl_opengl3.cpp",
+    "${workspaceFolder}\\source\\imgui\\imgui_stdlib.cpp",
+    "${workspaceFolder}\\source\\imgui\\imgui_tables.cpp",
+    "${workspaceFolder}\\source\\imgui\\imgui_widgets.cpp",
+    "${workspaceFolder}\\source\\imgui\\imgui.cpp",
+    "-o",
+    "${fileDirname}\\${fileBasenameNoExtension}.exe",
+    "-I${workspaceFolder}\\",
+    "-I${workspaceFolder}\\include",
+    "-I${workspaceFolder}\\include\\imgui",
+    "-I${workspaceFolder}\\include\\GLFW",
+    "-L${workspaceFolder}\\libs",
+    "-O2",
+    "-lglfw3dll",
+    "-lglad",
+    "-lGdi32"
+```
+
 ## 项目地址
 
 [Github link]()
