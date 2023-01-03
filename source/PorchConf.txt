@@ -1,21 +1,23 @@
 PorchConfHeader@zionFisher //Do not delete this line or you will not be able to open this file
 0.  ============================================================
-1.  asd | NonDSC             Porch Name
-2.  NonDSC                   Porch Type
+1.  2 | DSC                  Porch Name
+2.  DSC                      Porch Type
 3.  ---------------------------input----------------------------
-4.  1              txvid
-5.  1              hactive
-6.  1              vactive
-7.  1              htotal
-8.  1              vtotal
-9.  1              adj_vactive
-10. 1              adj_hactive
-11. 1              HFP
-12. 1              HSYNC
-13. 1              HBP
+4.  3              txvid
+5.  3              hactive
+6.  3              vactive
+7.  3              htotal
+8.  3              vtotal
+9.  3              adj_vactive
+10. 3              adj_hactive
+11. 3              HFP
+12. 3              HSYNC
+13. 3              HBP
 14. ---------------------------output---------------------------
-15. 1e+06          帧率
-16. 1              adj_htotal
+15. 333333         帧率
+16. 3              adj_htotal
 17. 0              adj_hblank
-18. 257            进 LP 时最小 HLINE
-19. 50             切 LP mode, Lane 速率至少需要达到的值
+18. 264            进 LP 时最小 HLINE
+19. 125            切 LP mode, Lane 速率至少需要达到的值
+20. -40            adj_hblank - 40
+21. -40            hblank - 40
