@@ -37,6 +37,8 @@ bool SaveToPorchConfFile(bool isDSC, int index, float input[], float output[]);
 bool SaveToPorchConfFile();
 bool LoadPorchConfFile();
 bool HandlePorchFileHeader(std::string input);
+bool AddPage(bool isDSC, int index, float input[], float output[]);
+bool AddExitsPage();
 bool DeletePage(int index);
 
 // Porch Conf file path
@@ -140,11 +142,13 @@ int main()
 // logic and UI layout entrance
 void MainWindowFunction()
 {
-    ShowMenuBar();    // menu bar layout and logic
+    LoadPorchConfFile(); // Load data
 
-    ShowWindows();    // show all windows: DSC/NonDSC/PorchFile/Confirm windows
+    ShowMenuBar();       // menu bar layout and logic
 
-    UpdateWindows();  // update windows name
+    ShowWindows();       // show all windows: DSC/NonDSC/PorchFile/Confirm windows
+
+    UpdateWindows();     // update windows name
 }
 
 // menu bar UI layout and logic
@@ -682,6 +686,12 @@ void NonDSCCalculateAndShow(int index)
 // save to porch file from DSC/NonDSC window
 bool SaveToPorchConfFile(bool isDSC, int index, float input[], float output[])
 {
+    for (auto &it : InMemoryData)
+    {
+        if (it.porchName + " | DSC" == DSCWindowName[index] || it.porchName + " | NonDSC " == NonDSCWindowName[index])
+            return false;
+    }
+
     if (isDSC)
     {
         if (DSCInputTxvid[index].empty() ||
@@ -971,6 +981,20 @@ bool HandlePorchFileHeader(std::string input)
 
     std::cerr << "Error: incorrect porch file format" << std::endl;
     return false;
+}
+
+bool AddPage(bool isDSC, int index, float input[], float output[])
+{
+    Conf *iterator = new Conf();
+
+    for (auto &it : InMemoryData)
+    {
+        if (it.porchName == DSCWindowName[index] || it.porchName == NonDSCWindowName[index])
+        {
+            delete(iterator);
+            iterator = &it;
+        }
+    }
 }
 
 // delete specified entry in InMemoryData
