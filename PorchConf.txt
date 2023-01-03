@@ -1,1 +1,87 @@
 PorchConfHeader@zionFisher //Do not delete this line or you will not be able to open this file
+0.  ============================================================
+1.  Reno5 | DSC              Porch Name
+2.  DSC                      Porch Type
+3.  ---------------------------input----------------------------
+4.  200            txvid
+5.  1080           hactive
+6.  2400           vactive
+7.  1260           htotal
+8.  2648           vtotal
+9.  1600           adj_vactive
+10. 720            adj_hactive
+11. 90             HFP
+12. 14             HSYNC
+13. 90             HBP
+14. ---------------------------output---------------------------
+15. 57.262         帧率
+16. 1890           adj_htotal
+17. 1170           adj_hblank
+18. 1112           进 LP 时最小 HLINE
+19. 750            切 LP mode, Lane 速率至少需要达到的值
+20. 1130           adj_hblank - 40
+21. 140            hblank - 40
+0.  ============================================================
+1.  Reno5 2 | DSC            Porch Name
+2.  DSC                      Porch Type
+3.  ---------------------------input----------------------------
+4.  180            txvid
+5.  1080           hactive
+6.  2400           vactive
+7.  1140           htotal
+8.  2648           vtotal
+9.  1600           adj_vactive
+10. 720            adj_hactive
+11. 90             HFP
+12. 14             HSYNC
+13. 90             HBP
+14. ---------------------------output---------------------------
+15. 56.9606        帧率
+16. 1710           adj_htotal
+17. 990            adj_hblank
+18. 1112           进 LP 时最小 HLINE
+19. 750            切 LP mode, Lane 速率至少需要达到的值
+20. 950            adj_hblank - 40
+21. 20             hblank - 40
+0.  ============================================================
+1.  RedMi_K40 | DSC          Porch Name
+2.  DSC                      Porch Type
+3.  ---------------------------input----------------------------
+4.  200            txvid
+5.  1080           hactive
+6.  2400           vactive
+7.  1365           htotal
+8.  2438           vtotal
+9.  2340           adj_vactive
+10. 1080           adj_hactive
+11. 170            HFP
+12. 20             HSYNC
+13. 20             HBP
+14. ---------------------------output---------------------------
+15. 60.0745        帧率
+16. 1400           adj_htotal
+17. 320            adj_hblank
+18. 1386           进 LP 时最小 HLINE
+19. 1400           切 LP mode, Lane 速率至少需要达到的值
+20. 280            adj_hblank - 40
+21. 245            hblank - 40
+0.  ============================================================
+1.  Nova7+FT8006S | NonDSC   Porch Name
+2.  NonDSC                   Porch Type
+3.  ---------------------------input----------------------------
+4.  150            txvid
+5.  720            hactive
+6.  1600           vactive
+7.  1355           htotal
+8.  1848           vtotal
+9.  1600           adj_vactive
+10. 720            adj_hactive
+11. 48             HFP
+12. 16             HSYNC
+13. 45             HBP
+14. ---------------------------output---------------------------
+15. 59.9032        帧率
+16. 1355           adj_htotal
+17. 635            adj_hblank
+18. 1054           进 LP 时最小 HLINE
+19. 700            切 LP mode, Lane 速率至少需要达到的值
